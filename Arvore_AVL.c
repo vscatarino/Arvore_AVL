@@ -140,7 +140,6 @@ Folha *insere(Folha *f, int num){
 	int done = 0;
 
 	f = insere_r(f, num, &done);
-	//imprime(f);
 	return f;
 }
 
@@ -231,39 +230,19 @@ void destruir(Folha* f){
 int main(int argc, char const *argv[])
 {
 	Folha *f;
-	int ar;
-	
-	f = insere(f, 0);
-	imprime(f);
-	printf("\n\n");
-	f = insere(f, 1);
-	imprime(f);
-	printf("\n\n");
-	f = insere(f, 2);
-	imprime(f);
-	printf("\n\n");
-	f = insere(f, 3);
-	imprime(f);
-	printf("\n\n");
-	f = insere(f, 4);
-	imprime(f);
-	f = retira(f, 0);
-	printf("\n\n");
-	f = insere(f, 5);
-	imprime(f);
-	printf("\n\n");
-	f = insere(f, 6);
-	imprime(f);
-	printf("\n\n");
-	f = insere(f, 7);
-	
-	destruir(f);
-	
-	printf("destruir!");
-	imprime(f);
+	int i = 0;
 
+	for(i; i < 9; i++){
+		f = insere(f, i);
+		imprime(f);
+		printf("\n\n");
+	}
+
+	f = retira(f, 5);
+	printf("5 foi retirado:");
+	imprime(f);
+		
 	
-   	return 0;
 }
 
 
